@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiMediaElementExample.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Play" 
+                Clicked="OnPlayButtonClicked"
+                HorizontalOptions="Fill" />
+            <toolkit:MediaElement x:Name="mediaElement"
+                Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                ShouldAutoPlay="True"
+                ShouldShowPlaybackControls="True"
+                HeightRequest="300"
+                WidthRequest="400"
+             />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
